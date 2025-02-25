@@ -5,6 +5,7 @@ from sklearn.linear_model import LinearRegression
 import pandas as pd
 import numpy as np
 import pickle
+import uvicorn
 
 app = FastAPI()
 class Data(BaseModel):
@@ -88,3 +89,6 @@ async def get_prediction():
 
     # Devolver la predicción en formato JSON
     return 'Modelo reentrenado'
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

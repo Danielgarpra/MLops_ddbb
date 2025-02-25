@@ -1,7 +1,6 @@
-fastapi
+fastapi[standard]
 pydantic
-sqlite3
-sklearn
+scikit-learn  # Cambiado de 'sklearn' a 'scikit-learn'
 pandas
 numpy
-pickle
+uvicorn

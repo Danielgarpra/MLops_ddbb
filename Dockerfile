@@ -1,7 +1,11 @@
 FROM python:3.11
-RUN mkdir /src
-WORKDIR /src
-ADD . /src
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
-CMD ["python", "api_model_2.py"]
-EXPOSE 5000
+
+COPY . .
+EXPOSE 8000
+
+CMD ["uvicorn", "api_model_2:app","--host","0.0.0.0","--port","8000"]
