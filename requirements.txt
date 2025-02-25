@@ -1,0 +1,7 @@
+fastapi
+pydantic
+sqlite3
+sklearn
+pandas
+numpy
+pickle
